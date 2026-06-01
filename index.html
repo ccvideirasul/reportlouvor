@@ -300,6 +300,14 @@ tbody tr:hover td{background:var(--light);}
 }
 
 @media(max-width:720px){
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+  .sc { max-width: none; white-space: normal; min-width: 150px; }
   .hdr-inner{padding:0 14px;}
   .nav-btn{padding:0 10px;font-size:10px;}
   .main{padding:18px 14px 60px;}
@@ -667,9 +675,9 @@ buildMedleys();
 <style>
   .dashboard-watermark {
     display: block;
-    margin: 10px auto 20px auto; /* Centraliza e dá espaço em cima e embaixo */
-    width: 90%; /* Adapta à tela do celular */
-    max-width: 450px; /* Impede que fique gigantesca no computador */
+    margin: 10px auto 20px auto;
+    width: 80%; /* Slightly smaller max width for mobile */
+    max-width: 400px; 
     height: auto;
     opacity: 0.15;
     pointer-events: none;
